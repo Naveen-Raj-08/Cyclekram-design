@@ -659,7 +659,6 @@
   left: -50px;
   width: 300px;
   background-color: rgba(36, 219, 36, 0.8);
-  backdrop-filter: blur(0px);
   padding: 8px 10px;
   transform: skewX(40deg);
 }
