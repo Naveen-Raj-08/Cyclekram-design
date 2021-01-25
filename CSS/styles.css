@@ -1266,7 +1266,7 @@
   padding: 5px 10px;
   margin-bottom: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 .wrapper .Venue .Order form input:focus {
   outline-color: #316b11;
@@ -1276,7 +1276,7 @@
   font-size: 15px;
   letter-spacing: 0.5px;
   padding: 5px 10px;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 .wrapper .Venue .Order form textarea:focus {
   outline-color: #316b11;
