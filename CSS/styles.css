@@ -506,7 +506,7 @@
 }
 .wrapper .Specification .First-spec h2 {
   color: #f5f5f5;
-  font-size: 24px;
+  font-size: 28px;
   margin-top: 50px;
   font-weight: bold;
   letter-spacing: 1.5px;
@@ -514,7 +514,7 @@
 .wrapper .Specification .First-spec p {
   color: #f5f5f5;
   margin-top: 20px;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 600;
 }
 .wrapper .Specification .Second-spec {
@@ -539,14 +539,14 @@
 }
 .wrapper .Specification .Second-spec h2 {
   color: gray;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   letter-spacing: 1.5px;
 }
 .wrapper .Specification .Second-spec p {
   color: gray;
   margin-top: 20px;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 600;
 }
 .wrapper .Specification .Second-spec img {
@@ -586,7 +586,7 @@
 }
 .wrapper .Specification-2 .Third-spec h2 {
   color: #f5f5f5;
-  font-size: 24px;
+  font-size: 28px;
   margin-top: 50px;
   font-weight: bold;
   letter-spacing: 1.5px;
@@ -594,7 +594,7 @@
 .wrapper .Specification-2 .Third-spec p {
   color: #f5f5f5;
   margin-top: 20px;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 600;
 }
 .wrapper .Specification-2 .Fourth-spec {
@@ -619,14 +619,14 @@
 }
 .wrapper .Specification-2 .Fourth-spec h2 {
   color: gray;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   letter-spacing: 1.5px;
 }
 .wrapper .Specification-2 .Fourth-spec p {
   color: gray;
   margin-top: 20px;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 600;
 }
 .wrapper .Specification-2 .Fourth-spec img {
@@ -664,7 +664,7 @@
 }
 .wrapper .Products .Product .Product-Heading h2 {
   color: #f5f5f5;
-  font-size: 25px;
+  font-size: 32px;
   margin: 0;
   transform: skewX(-40deg);
   margin-left: 60px;
@@ -672,7 +672,7 @@
 .wrapper .Products .Product .Product-Heading p {
   color: #f5f5f5;
   margin: 0;
-  font-size: 15px;
+  font-size: 20px;
   letter-spacing: 0.5px;
   transform: skewX(-40deg);
   margin-left: 40px;
@@ -883,21 +883,23 @@
   color: white;
 }
 .wrapper .Our-Favorites .Cycler .Image-Text h2 {
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 600;
   color: #f5f5f5;
 }
 .wrapper .Our-Favorites .Cycler .Image-Text p {
-  font-size: 15px;
+  font-size: 14px;
   color: #f5f5f5;
   font-weight: 600;
 }
 .wrapper .Our-Favorites .Cycler .Image-Text button {
-  padding: 5px 12px;
+  padding: 12px 24px;
   background: transparent;
   border: 1px solid white;
   color: #f5f5f5;
   transition: all 0.4s ease-in-out;
+  font-size: 15px;
+  font-weight: 600;
 }
 .wrapper .Our-Favorites .Cycler .Image-Text button:hover {
   color: #000;
@@ -920,22 +922,24 @@
   left: 50px;
 }
 .wrapper .Our-Favorites .About .About-Heading h2 {
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 600;
   color: #f5f5f5;
   margin-bottom: 20px;
 }
 .wrapper .Our-Favorites .About .About-Heading p {
-  font-size: 13px;
+  font-size: 14px;
   color: #f5f5f5;
   margin-bottom: 50px;
 }
 .wrapper .Our-Favorites .About .About-Heading button {
-  padding: 5px 12px;
+  padding: 12px 24px;
   background: transparent;
   border: 1px solid white;
   color: #f5f5f5;
   transition: all 0.5s ease-in-out;
+  font-size: 15px;
+  font-weight: 600;
 }
 .wrapper .Our-Favorites .About .About-Heading button:hover {
   background-color: #f5f5f5;
@@ -958,18 +962,24 @@
   left: 50px;
 }
 .wrapper .Our-Favorites .Cycling .Cycling-Heading h2 {
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 600;
   color: #f5f5f5;
   margin-bottom: 30px;
 }
 .wrapper .Our-Favorites .Cycling .Cycling-Heading button {
-  padding: 5px 20px;
+  padding: 12px 20px;
   width: 250px;
-  background: #00b300;
+  background: #01CB11;  
   border: 1px solid #00b300;
   color: #f5f5f5;
   text-align: center;
+  font-size: 16px;
+  transition: background-color .3s ease-in-out;
+  font-weight: 600;
+}
+.wrapper .Our-Favorites .Cycling .Cycling-Heading button:hover{
+  background: #009e00;
 }
 .wrapper .Subscribe {
   display: grid;
@@ -984,7 +994,7 @@
   border-radius: 20px;
   padding: 25px 20px;
   margin: 0 10px;
-  min-height: 180px;
+  min-height: 270px;
 }
 .wrapper .Subscribe .Subscribe-mail h1 {
   color: #f5f5f5;
@@ -993,7 +1003,7 @@
   margin-bottom: 10px;
 }
 .wrapper .Subscribe .Subscribe-mail p {
-  font-size: 14px;
+  font-size: 16px;
   color: #f5f5f5;
 }
 .wrapper .Subscribe .Subscribe-mail form {
@@ -1019,7 +1029,7 @@
   color: white;
   background: #00b300;
 }
-.wrapper .Subscribe .Subscribe-mail span {
+.wrapper .Subscribe .Subscribe-mail label {
   color: #f5f5f5;
   font-size: 13px;
   margin: 0 10px;
@@ -1029,7 +1039,7 @@
   grid-template-columns: 70% 30%;
   grid-gap: 0px;
   align-items: none;
-  background: #00b300;
+  background: #01CB11;
   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGVmcz48cGF0dGVybiBpZD0icGF0dGVybiIgd2lkdGg9IjQiIGhlaWdodD0iNCIgdmlld0JveD0iMCAwIDQwLDQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBwYXR0ZXJuVHJhbnNmb3JtPSJyb3RhdGUoNTApICI+PHJlY3QgaWQ9InBhdHRlcm4tYmFja2dyb3VuZCIgd2lkdGg9IjQwMCUiIGhlaWdodD0iNDAwJSIgZmlsbD0icmdiYSgwLCAxNzksIDAsMSkiPjwvcmVjdD4gPHBhdGggZmlsbD0icmdiYSgwLCAwLCAwLDEpIiBkPSJNIC0xMCAzMCBoIDYwIHYxIGgtNjB6IE0tMTAgLTEwIGg2MCB2MSBoLTYwIj48L3BhdGg+PHBhdGggZmlsbD0icmdiYSgxNiwgMTYsIDE2LDEpIiBkPSJtIC0xMCAxMSBoIDYwIHYxIGgtNjB6IE0tMTAgLTI5IGg2MCB2MSBoLTYweiI+PC9wYXRoPjwvcGF0dGVybj4gIDwvZGVmcz4gPHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgaGVpZ2h0PSIxMDAlIiB3aWR0aD0iMTAwJSI+PC9yZWN0Pjwvc3ZnPg==");
   border-radius: 20px;
   padding: 10px 20px;
@@ -1046,7 +1056,7 @@
   margin: 10px 0;
 }
 .wrapper .Subscribe .Contact .Contact-details p {
-  font-size: 14px;
+  font-size: 16px;
   color: #f5f5f5;
 }
 .wrapper .Subscribe .Contact .Contact-details button {
@@ -1062,14 +1072,14 @@
   max-width: 100%;
 }
 .wrapper .Subscribe .Contact .Contact-Person h3 {
-  font-size: 13px;
+  font-size: 14px;
   margin-top: 15px;
   margin-bottom: 0;
   color: #f5f5f5;
   letter-spacing: 0.6px;
 }
 .wrapper .Subscribe .Contact .Contact-Person p {
-  font-size: 13px;
+  font-size: 14px;
   color: #f5f5f5;
 }
 .wrapper .Product-list {
@@ -1295,7 +1305,7 @@
   align-items: center;
   flex-wrap: nowrap;
 }
-.wrapper .Venue .Order form .Recaptcha .checkbox p {
+.wrapper .Venue .Order form .Recaptcha .checkbox lable {
   margin: 0;
 }
 .wrapper .Venue .Order form .Recaptcha .checkbox input {
@@ -1693,6 +1703,9 @@
   .owl-theme .owl-dots .owl-dot span {
     padding: 6px;
     border: 1px solid #fff;
+  }
+  #sidebar .list-items li {
+    margin-left: 10px;
   }
   .wrapper .Heading .Heading-logo {
     margin: 0 auto;
