@@ -503,6 +503,11 @@
   color: white;
   font-size: 15px;
   font-weight: 600;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.wrapper .Specification .First-spec button:hover{
+  color: #000;
+  background-color: #fff;
 }
 .wrapper .Specification .First-spec h2 {
   color: #f5f5f5;
@@ -536,6 +541,11 @@
   font-size: 15px;
   font-weight: 600;
   margin-top: 50px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.wrapper .Specification .Second-spec button:hover{
+  color: #fff;
+  background-color: #000;
 }
 .wrapper .Specification .Second-spec h2 {
   color: gray;
@@ -583,6 +593,11 @@
   color: white;
   font-size: 15px;
   font-weight: 600;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.wrapper .Specification-2 .Third-spec button:hover{
+  background: #fff;
+  color: #000;
 }
 .wrapper .Specification-2 .Third-spec h2 {
   color: #f5f5f5;
@@ -608,7 +623,7 @@
 }
 .wrapper .Specification-2 .Fourth-spec button {
   font-family: Roboto;
-  padding: 8px 12px;
+  padding: 12px 24px;
   background: transparent;
   border: 1px solid #505050;
   border-radius: 0;
@@ -616,6 +631,11 @@
   font-size: 15px;
   font-weight: 600;
   margin-top: 50px;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out; 
+}
+.wrapper .Specification-2 .Fourth-spec button:hover{
+  background: #000;
+  color: #fff;
 }
 .wrapper .Specification-2 .Fourth-spec h2 {
   color: gray;
@@ -717,6 +737,10 @@
   font-weight: 600;
   width: 100%;
   margin-bottom: 15px;
+  transition: background-color 0.3s ease-in-out;
+}
+.wrapper .Our-service .Service1 button:hover{
+  background: rgb(218, 0, 0);
 }
 .wrapper .Our-service .Service1 .Image img {
   max-width: 100%;
@@ -756,6 +780,7 @@
   font-weight: 600;
   width: 100%;
   margin-bottom: 15px;
+  transition: background-color 0.3s ease-in-out;
 }
 .wrapper .Our-service .Service2 button:hover {
   background: #009a00;
@@ -793,6 +818,7 @@
   font-weight: 600;
   width: 100%;
   margin-bottom: 15px;
+  transition: background-color 0.3s ease-in-out;
 }
 .wrapper .Our-service .Service3 button:hover {
   background: green;
@@ -830,6 +856,7 @@
   font-weight: 600;
   width: 100%;
   margin-bottom: 15px;
+  transition: background-color 0.3s ease-in-out;
 }
 .wrapper .Our-service .Service4 button:hover {
   background: darkgreen;
