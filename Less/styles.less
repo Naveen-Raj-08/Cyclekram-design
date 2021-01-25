@@ -1,0 +1,1060 @@
+@import "https://fonts.googleapis.com/css?family=Roboto";
+
+@Text: #f5f5f5;
+@bg-color: #606060;
+@width: 100%;
+@height: 100%;
+@Design-color: darken(rgb(171, 255, 46), 20%);
+
+.ResponsiveImage(@max-width, @width) {
+  max-width: @max-width;
+  width: @width;
+}
+.Flexbox(@Direction, @Content, @align-items, @wrap) {
+  display: flex;
+  flex-direction: @Direction;
+  justify-content: @Content;
+  align-items: @align-items;
+  flex-wrap: @wrap;
+}
+.Grid(@Size, @gap, @align-items) {
+  display: grid;
+  grid-template-columns: @Size;
+  grid-gap: @gap;
+  align-items: @align-items;
+}
+
+.wrapper {
+  max-width: 1200px;
+  .Heading {
+    .Grid(30%50%20%, 5px, center);
+    background-color: @bg-color;
+    padding: 5px;
+    .Heading-logo {
+      margin: 10px 0;
+      img {
+        .ResponsiveImage(100%, 100%);
+      }
+    }
+    .Heading-links {
+      margin: 10px 0;
+      ul {
+        .Flexbox(row, center, center, nowrap );
+        list-style: none;
+        float: right;
+        li {
+          margin-top: 10px;
+          a {
+            margin: 0 10px;
+            padding: 10px 5px;
+            color: @Text;
+            font-size: 15px;
+            letter-spacing: 0.4px;
+            font-weight: 600;
+            text-align: center;
+            transition: color 0.5s ease-in-out;
+            &:hover {
+              text-decoration: none;
+              color: darken(@Text, 30%);
+            }
+          }
+        }
+      }
+    }
+    .Heading-cart {
+      margin: 5px 15px;
+      a {
+        padding: 5px 5px;
+        color: @Text;
+        font-size: 13px;
+        letter-spacing: 0.4px;
+        font-weight: 600;
+        text-align: center;
+        transition: color 0.5s ease-in-out;
+        float: right;
+        border: 1px solid @Text;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.15);
+        position: relative;
+        .Price {
+          margin: 0;
+          padding: 10px 10px;
+          i {
+            margin: 0 3px;
+            font-size: 20px;
+          }
+          #Cart-count {
+            position: absolute;
+            top: 10px;
+            right: 6px;
+            font-size: 8px;
+            min-width: 17px;
+            padding: 4px 3px;
+            border-radius: 50%;
+          }
+        }
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .Navigation {
+    .Grid(70%30%, 0px, baseline);
+    background: darken(@Text, 10%);
+    .Navbar {
+      .Nav-links {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: relative;
+        .Flexbox(row, space-between, center, nowrap );
+        li {
+          display: inline-block;
+          &:hover {
+            .Dropdown {
+              display: inherit;
+            }
+          }
+        }
+        .Dropdown {
+          display: none;
+          position: absolute;
+          list-style: none;
+          top: 60px;
+          padding: 0;
+          margin: 0;
+          background-color: darken(@Text, 10%);
+          li {
+            width: 170px;
+            float: none;
+            display: list-item;
+            position: relative;
+            padding: 10px 10px;
+            a {
+              color: darken(@Text, 90%);
+              font-size: 14px;
+              font-weight: 550;
+              letter-spacing: 0.5px;
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+      .Nav {
+        display: block;
+        padding: 0 8px;
+        font-weight: 600;
+        color: darken(@Text, 90%);
+        font-size: 15px;
+        text-transform: capitalize;
+        line-height: 60px;
+        letter-spacing: 0.6px;
+        text-decoration: none;
+      }
+    }
+    .Search-bar {
+      padding: 0 10px;
+      margin: 0 10px;
+      button {
+        background: lightgray;
+        border: none;
+        padding: 5px 8px;
+        span {
+          font-size: 25px;
+        }
+      }
+      form {
+        position: relative;
+        input {
+          padding: 10px 10px;
+          font-size: 15px;
+          border: 1px solid white;
+          width: 80%;
+        }
+        img {
+          .ResponsiveImage(100%, 8%);
+          position: absolute;
+          right: 80px;
+          top: 10px;
+        }
+        i {
+          position: absolute;
+          top: 0;
+          right: 0;
+          font-size: 25px;
+          padding: 8px 14px;
+          background-color: #606060;
+          border-radius: 50%;
+          color: @Text;
+        }
+      }
+      .Mobile-nav {
+        .toggle {
+          border: none;
+          cursor: pointer;
+          font-size: 20px;
+          padding: 10px 15px;
+          position: absolute;
+          top: 0;
+          right: 1px;
+          transform: translateX(100%);
+        }
+
+        .toggle:focus {
+          outline: none;
+        }
+
+        .toggle .fa-bars {
+          display: block;
+        }
+
+        .toggle .fa-times {
+          display: none;
+        }
+        #nav {
+          background-color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 30px 0 50px;
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 100vh;
+          transform: translateX(-100%);
+          transition: transform 0.4s ease;
+          display: none;
+          &:active {
+            transform: translateX(0);
+            .toggle {
+              .fa-bars {
+                display: none;
+              }
+              .fa-times {
+                display: block;
+              }
+            }
+          }
+          ul {
+            padding: 0;
+            list-style-type: none;
+            li {
+              margin: 14px 0;
+              text-align: right;
+            }
+          }
+          a {
+            color: #111;
+            font-size: 24px;
+            text-decoration: none;
+            text-transform: Uppercase;
+            &:hover {
+              color: #d35400;
+            }
+          }
+        }
+      }
+    }
+  }
+  .Heading-products {
+    margin: 5px 0;
+    .Grid(repeat(6, 16.66%), 0px, center);
+    .Product {
+      .Grid(30%70%, 0px, center);
+      margin: 0 3px;
+      padding: 15px 5px;
+      min-height: 20px;
+      background-color: lighten(lightgreen, 18%);
+      text-align: left;
+      color: #000;
+      &:hover {
+        text-decoration: none;
+      }
+      img {
+        .ResponsiveImage(100%, 100%);
+      }
+      p {
+        padding: 0 5px;
+        font-size: 14px;
+        margin: auto 0;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        span {
+          font-size: 13px;
+          font-weight: 400;
+          letter-spacing: 0.2px;
+        }
+      }
+    }
+  }
+  .Carousel-content {
+    #Product-carousel {
+      .Item {
+        position: relative;
+        .Text {
+          position: absolute;
+          top: 30%;
+          left: 50px;
+          h5 {
+            color: @Text;
+            font-size: 5rem;
+            font-weight: 600;
+          }
+          a {
+            margin-top: 30px;
+            font-size: 30px;
+            padding: 10px 10px;
+            color: @Text;
+            background-color: rgba(255, 255, 255, 0.15);
+            font-weight: 600;
+            letter-spacing: 1px;
+            border: 1px solid @Text;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .Feedback {
+    margin: 5px 0;
+    background: darken(@Text, 2%);
+    .Grid(65%35%, 0px, center);
+    padding: 15px 0;
+    text-align: left;
+    .Feedback-text {
+      font-family: Roboto;
+      padding: 10px 10px;
+      h5 {
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        word-spacing: 2px;
+        color: darken(lightgreen, 60%);
+        span {
+          font-size: 15px;
+          font-weight: 300;
+          color: darken(@Text, 40%);
+          letter-spacing: 0.2px;
+          word-spacing: 1px;
+        }
+      }
+    }
+    .Feedback-author {
+      background-color: @Design-color;
+      margin: 0 10px;
+      h3 {
+        padding: 20px 10px;
+        text-align: center;
+        color: @Text;
+      }
+    }
+  }
+  .Description {
+    margin-top: 40px;
+    padding: 10px 0;
+    .Description-heading {
+      h2 {
+        color: #000;
+        letter-spacing: 1px;
+        font-size: 25px;
+      }
+    }
+    .Description-details {
+      margin-top: 20px;
+      font-size: 15px;
+      color: darken(@Text, 60%);
+      letter-spacing: 0.4px;
+      font-weight: 550;
+    }
+  }
+  .Specification {
+    .Grid(50%50%, 0px, center);
+    grid-template-areas: "FirstProduct SecondProduct";
+    padding: 10px 0;
+    .First-spec {
+      grid-area: FirstProduct;
+      background: url("../Media/Item.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: scroll;
+      min-height: 300px;
+      margin: 0 10px;
+      padding: 30px;
+      button {
+        padding: 8px 12px;
+        background: transparent;
+        border: 1px solid @Text;
+        border-radius: 0;
+        color: white;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      h2 {
+        color: @Text;
+        font-size: 24px;
+        margin-top: 50px;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+      }
+      p {
+        color: @Text;
+        margin-top: 20px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+    }
+    .Second-spec {
+      grid-area: SecondProduct;
+      background: url("../Media/Item2.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: scroll;
+      min-height: 300px;
+      margin: 0 10px;
+      padding: 30px;
+      button {
+        padding: 8px 12px;
+        background: transparent;
+        border: 1px solid @Text;
+        border-radius: 0;
+        color: white;
+        font-size: 15px;
+        font-weight: 600;
+        margin-top: 50px;
+      }
+      h2 {
+        color: @Text;
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+      }
+      p {
+        color: @Text;
+        margin-top: 20px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+    }
+  }
+  .Products {
+    margin-top: 50px;
+    .Grid(repeat(3, 33.3%), 0px, center);
+    grid-row-gap: 20px;
+    .Product {
+      margin: 0 10px;
+      position: relative;
+      overflow: hidden;
+      .Product-Heading {
+        position: absolute;
+        top: 40%;
+        left: 0px;
+        width: 200px;
+        background-color: rgba(36, 219, 36, 0.8);
+        backdrop-filter: blur(0px);
+        padding: 8px 10px;
+        h2 {
+          color: @Text;
+          font-size: 25px;
+          margin: 0;
+        }
+        p {
+          color: @Text;
+          margin: 0;
+          font-size: 15px;
+          letter-spacing: 0.5px;
+        }
+      }
+      .Image {
+        img {
+          .ResponsiveImage(100%, 100%);
+        }
+      }
+    }
+  }
+  .Our-service {
+    margin: 50px 0;
+    .Grid(repeat(4, 25%), 0px, center);
+    padding: 10px;
+    text-align: center;
+    .Service1 {
+      background: rgb(230, 207, 2);
+      padding: 5px 10px;
+      margin: 0 10px;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(3, 33%);
+      min-height: 200px;
+      .Service-Heading {
+        h3 {
+          color: red;
+          font-weight: 600;
+          margin-bottom: 15px;
+        }
+      }
+      button {
+        padding: 8px 10px;
+        border: 1px solid red;
+        background: red;
+        color: @Text;
+        font-size: 14px;
+        letter-spacing: 0.4px;
+        font-weight: 600;
+      }
+      .Image {
+        img {
+          .ResponsiveImage(100%, 20%);
+          margin: 10px 0;
+        }
+      }
+    }
+    .Service2 {
+      background: darken(@Text, 10%);
+      padding: 5px 10px;
+      margin: 0 10px;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(3, 33%);
+      min-height: 200px;
+      .Image {
+        img {
+          .ResponsiveImage(100%, 30%);
+          margin: 10px 0;
+        }
+      }
+      .Service-Heading {
+        h3 {
+          color: darken(green, 10%);
+          font-weight: 600;
+          margin-bottom: 15px;
+        }
+      }
+      button {
+        padding: 8px 10px;
+        border: 1px solid lighten(green, 10%);
+        background: lighten(green, 10%);
+        color: @Text;
+        font-size: 14px;
+        letter-spacing: 0.4px;
+        font-weight: 600;
+      }
+    }
+    .Service3 {
+      background: darken(@Text, 10%);
+      padding: 5px 10px;
+      margin: 0 10px;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(3, 33%);
+      min-height: 200px;
+      .Image {
+        img {
+          .ResponsiveImage(100%, 20%);
+          margin: 10px 0;
+        }
+      }
+      .Service-Heading {
+        h3 {
+          color: darken(green, 10%);
+          font-weight: 600;
+          margin-bottom: 15px;
+        }
+      }
+      button {
+        padding: 8px 10px;
+        border: 1px solid lighten(green, 5%);
+        background: lighten(green, 5%);
+        color: @Text;
+        font-size: 14px;
+        letter-spacing: 0.4px;
+        font-weight: 600;
+      }
+    }
+    .Service4 {
+      background: darken(@Text, 10%);
+      padding: 5px 10px;
+      margin: 0 10px;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(3, 33%);
+      min-height: 200px;
+      .Image {
+        img {
+          .ResponsiveImage(100%, 20%);
+          margin: 10px 0;
+        }
+      }
+      .Service-Heading {
+        h3 {
+          color: darken(green, 10%);
+          font-weight: 600;
+          margin-bottom: 15px;
+        }
+      }
+      button {
+        padding: 8px 10px;
+        border: 1px solid green;
+        background: green;
+        color: @Text;
+        font-size: 14px;
+        letter-spacing: 0.4px;
+        font-weight: 600;
+      }
+    }
+  }
+  .Our-Favorites {
+    background-color: #303030;
+    .Grid(30% 70%, 0px, none);
+    grid-template-areas:
+      "Cycler About-cycler"
+      "Cycler Cycling";
+    padding: 20px;
+
+    .Cycler {
+      grid-area: Cycler;
+      text-align: right;
+      padding: 5px 20px;
+      position: relative;
+      .Cycler-Heading {
+        padding: 0;
+        h2 {
+          font-size: 25px;
+          font-weight: 600;
+          color: @Text;
+          margin-top: 50px;
+        }
+        p {
+          font-size: 30px;
+          color: @Text;
+          font-weight: 600;
+          span {
+            font-size: 22px;
+          }
+        }
+      }
+      .Image {
+        padding: 0 10px;
+        img {
+          .ResponsiveImage(100%, 100%);
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+      }
+      .Image-Text {
+        position: absolute;
+        bottom: 30px;
+        right: 5px;
+        color: white;
+        h2 {
+          font-size: 25px;
+          font-weight: 600;
+          color: @Text;
+        }
+        p {
+          font-size: 15px;
+          color: @Text;
+          font-weight: 600;
+        }
+        button {
+          padding: 5px 12px;
+          background: transparent;
+          border: 1px solid white;
+          color: @Text;
+        }
+      }
+    }
+    .About {
+      grid-area: About-cycler;
+      padding-right: 0;
+      padding-left: 20px;
+      padding-top: 10px;
+      position: relative;
+      .Image {
+        img {
+          max-width: @width;
+          width: 100%;
+        }
+      }
+      .About-Heading {
+        position: absolute;
+        top: 25%;
+        left: 50px;
+        h2 {
+          font-size: 25px;
+          font-weight: 600;
+          color: @Text;
+          margin-bottom: 20px;
+        }
+        p {
+          font-size: 13px;
+          color: @Text;
+          margin-bottom: 50px;
+        }
+        button {
+          padding: 5px 12px;
+          background: transparent;
+          border: 1px solid white;
+          color: @Text;
+        }
+      }
+    }
+    .Cycling {
+      grid-area: Cycling;
+      padding-right: 0;
+      padding-left: 20px;
+      padding-top: 10px;
+      position: relative;
+      .Image {
+        img {
+          .ResponsiveImage(100%, 100%);
+        }
+      }
+      .Cycling-Heading {
+        position: absolute;
+        bottom: 30px;
+        left: 50px;
+        h2 {
+          font-size: 25px;
+          font-weight: 600;
+          color: @Text;
+          margin-bottom: 30px;
+        }
+        button {
+          padding: 5px 20px;
+          width: 250px;
+          background: lighten(green, 10%);
+          border: 1px solid lighten(green, 10%);
+          color: @Text;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .Subscribe {
+    .Grid(repeat(2, 50%), 0px ,none);
+    margin-top: 50px;
+    .Subscribe-mail {
+      background: darken(green, 15%);
+      border-radius: 20px;
+      padding: 25px 20px;
+      margin: 0 10px;
+      min-height: 180px;
+      h1 {
+        color: @Text;
+        font-size: 20px;
+        letter-spacing: 0.5px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 14px;
+        color: @Text;
+      }
+      form {
+        width: 100%;
+        .form {
+          margin: 15px 0;
+          input {
+            padding: 8px 13px;
+            width: 60%;
+            border: none;
+          }
+          button {
+            width: 30%;
+            padding: 8px 13px;
+            border: none;
+            margin: 0 8px;
+            color: white;
+            background: lighten(green, 10%);
+          }
+        }
+      }
+      span {
+        color: @Text;
+        font-size: 13px;
+        margin: 0 10px;
+      }
+    }
+    .Contact {
+      .Grid(70% 30%, 0px , none);
+      background: lighten(green, 10%);
+      border-radius: 20px;
+      padding: 10px 20px;
+      margin: 0 10px;
+      min-height: 180px;
+      .Contact-details {
+        h1 {
+          color: @Text;
+          font-size: 20px;
+          letter-spacing: 0.5px;
+          margin: 10px 0;
+        }
+        p {
+          font-size: 14px;
+          color: @Text;
+        }
+        button {
+          width: 30%;
+          padding: 8px 13px;
+          font-size: 15px;
+          border: none;
+          margin: 0 8px;
+          color: white;
+          background: darken(green, 15%);
+        }
+      }
+      .Contact-Person {
+        .Image {
+          img {
+            max-width: 100%;
+          }
+        }
+        h3 {
+          font-size: 13px;
+          margin-top: 15px;
+          margin-bottom: 0;
+          color: @Text;
+          letter-spacing: 0.6px;
+        }
+        p {
+          font-size: 13px;
+          color: @Text;
+        }
+      }
+    }
+  }
+  .Product-list {
+    width: 70%;
+    margin: 10px 20px;
+    .List-Header {
+      list-style: none;
+      .Grid(repeat(3, 33.3%), 0px , none);
+      padding: 20px 10px;
+      width: 100%;
+      .list-item1 {
+        width: 100%;
+        .List-Title {
+          padding: 10px 10px;
+          color: #202020;
+          width: 100%;
+          border-bottom: 1px solid green;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+      ul {
+        list-style: none;
+        padding: 10px;
+        li {
+          padding: 10px 5px;
+          border-bottom: 1px solid green;
+          a {
+            color: #202020;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      .list-item2 {
+        .List-Title {
+          padding: 10px 10px;
+          color: #202020;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        ul {
+          list-style: none;
+          padding: 10px;
+          li {
+            padding: 10px 5px;
+            a {
+              color: #202020;
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+      .list-item3 {
+        .List-Title {
+          padding: 10px 10px;
+          color: #202020;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        ul {
+          list-style: none;
+          padding: 10px;
+          li {
+            padding: 10px 5px;
+            a {
+              color: #202020;
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .Venue {
+    .Grid(repeat(4, 25%), 0px, none);
+    background-color: #316b11;
+    margin-top: 50px;
+    padding: 20px;
+    .Location {
+      .heading {
+        border-bottom: 1px solid white;
+        h2 {
+          padding: 20px 0;
+          font-size: 25px;
+          letter-spacing: 0.6px;
+          color: @Text;
+          margin: 10px 0;
+        }
+      }
+      .details {
+        margin: 25px 0;
+        h5 {
+          font-size: 15px;
+          padding-top: 5px;
+          color: @Text;
+          font-weight: bold;
+          span {
+            font-weight: 400;
+            letter-spacing: 0.3px;
+          }
+        }
+        p {
+          margin: 0;
+          color: @Text;
+          font-size: 13px;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+    .Timing {
+      .heading {
+        border-bottom: 1px solid white;
+        h2 {
+          padding: 20px 0;
+          font-size: 25px;
+          letter-spacing: 0.6px;
+          color: @Text;
+          margin: 10px 0;
+        }
+      }
+      .details {
+        margin: 25px 0;
+        h5 {
+          font-size: 15px;
+          padding-top: 5px;
+          color: @Text;
+        }
+      }
+    }
+    .Info {
+      .heading {
+        border-bottom: 1px solid white;
+        h2 {
+          padding: 20px 0;
+          font-size: 25px;
+          letter-spacing: 0.6px;
+          color: @Text;
+          margin: 10px 0;
+        }
+      }
+      .details {
+        margin: 25px 0;
+        padding: 0 10px;
+        h6 {
+          font-size: 15px;
+          letter-spacing: 0.6px;
+          color: @Text;
+          padding-bottom: 20px;
+          border-bottom: 1px solid white;
+        }
+        p {
+          font-size: 15px;
+          letter-spacing: 0.6px;
+          color: @Text;
+          font-weight: 600;
+        }
+      }
+    }
+    .Order {
+      .heading {
+        border-bottom: 1px solid white;
+        h2 {
+          font-size: 25px;
+          letter-spacing: 0.6px;
+          color: @Text;
+          margin: 10px 0;
+          padding: 20px 0;
+        }
+      }
+      form {
+        margin: 30px 0;
+        input {
+          width: 100%;
+          padding: 5px 10px;
+          margin-bottom: 10px;
+          border: none;
+        }
+        textarea {
+          width: 100%;
+          font-size: 15px;
+          letter-spacing: 0.5px;
+          padding: 5px 10px;
+        }
+        .Recaptcha {
+          background: @Text;
+          .Grid(70% 30%, 0px , none);
+          .checkbox {
+            .Flexbox(row, space-between, center, nowrap);
+            input {
+              width: 20%;
+            }
+          }
+          .Image {
+            img {
+              .ResponsiveImage(100%, 80%);
+            }
+          }
+        }
+        button {
+          margin: 10px 0;
+          padding: 10px 20px;
+          font-size: 13px;
+          color: white;
+          border: 1px solid lighten(green, 15%);
+          background: lighten(green, 15%);
+        }
+      }
+    }
+  }
+  .HR {
+    background: @Text;
+    width: 100%;
+    height: 1px;
+  }
+  .Footer {
+    background: #316b11;
+    text-align: center;
+    padding: 60px 0;
+    h5 {
+      color: @Text;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+}

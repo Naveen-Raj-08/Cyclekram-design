@@ -1,0 +1,597 @@
+
+
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyckelkram.dk Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./OwlCarousel/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./OwlCarousel/dist/assets/owl.theme.default.min.css"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <link rel="stylesheet" href="/CSS/styles.css" />
+  </head>
+  <body>
+    <div class="wrapper container">
+      <header>
+        <div class="Heading">
+          <div class="Heading-logo">
+            <a href="#"><img src="./Media/cropped-logo-1.png" alt="logo" /></a>
+          </div>
+          <div class="Heading-links">
+            <ul>
+              <li><a href="#">Om os</a></li>
+              <li><a href="#">Kontakt</a></li>
+              <li><a href="#">Indkøbsvogn</a></li>
+            </ul>
+          </div>
+          <div class="Heading-cart">
+            <a href="#"
+              ><p class="Price">
+                DKK 0,00
+                <i class="fas fa-shopping-cart"></i
+                ><span id="Cart-count" class="badge badge-danger">69</span>
+              </p></a
+            >
+          </div>
+        </div>
+        <div class="Navigation">
+          <nav class="Navbar">
+            <ul class="Nav-links">
+              <li>
+                <a class="Nav" href="#"
+                  >Cykler <i class="fas fa-caret-down"></i
+                ></a>
+
+                <ul class="Dropdown">
+                  <li><a href="#">Børnecykler</a></li>
+                  <li><a href="#">Damecykler</a></li>
+                  <li><a href="#">Mountainbikes</a></li>
+                  <li><a href="#">Hybrid cykler</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="Nav" href="#"
+                  >Cykelhjelme <i class="fas fa-caret-down"></i
+                ></a>
+
+                <ul class="Dropdown">
+                  <li><a href="#">Hybrid cykler</a></li>
+                  <li><a href="#">Børnecykler</a></li>
+                  <li><a href="#">Damecykler</a></li>
+                  <li><a href="#">Mountainbikes</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="Nav" href="#"
+                  >Cykeltøj <i class="fas fa-caret-down"></i
+                ></a>
+
+                <ul class="Dropdown">
+                  <li><a href="#">Damecykler</a></li>
+                  <li><a href="#">Mountainbikes</a></li>
+                  <li><a href="#">Hybrid cykler</a></li>
+                  <li><a href="#">Børnecykler</a></li>
+                  <li><a href="#">Damecykler</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="Nav" href="#"
+                  >Udstyr og tilbehør <i class="fas fa-caret-down"></i
+                ></a>
+
+                <ul class="Dropdown">
+                  <li><a href="#">Mountainbikes</a></li>
+                  <li><a href="#">Damecykler</a></li>
+                  <li><a href="#">Mountainbikes</a></li>
+                  <li><a href="#">Hybrid cykler</a></li>
+                  <li><a href="#">Børnecykler</a></li>
+                  <li><a href="#">Damecykler</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="Nav" href="#"
+                  >Cykelværktøj <i class="fas fa-caret-down"></i
+                ></a>
+
+                <ul class="Dropdown">
+                  <li><a href="#">Mountainbikes</a></li>
+                  <li><a href="#">Hybrid cykler</a></li>
+                  <li><a href="#">Børnecykler</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="Nav" href="#"
+                  >Mærker <i class="fas fa-caret-down"></i
+                ></a>
+
+                <ul class="Dropdown">
+                  <li><a href="#">Mountainbikes</a></li>
+                  <li><a href="#">Damecykler</a></li>
+                  <li><a href="#">Mountainbikes</a></li>
+                  <li><a href="#">Hybrid cykler</a></li>
+                  <li><a href="#">Børnecykler</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="Search-bar">
+            <div class="Mobile-menu">
+              <input type="checkbox" id="btn" hidden />
+              <label for="btn" class="menu-btn">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+              </label>
+              <nav id="sidebar">
+                <ul class="list-items">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Clients</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Contact us</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <form>
+              <input type="text" placeholder="Sog" />
+              <img
+                id="search-btn"
+                src="./Media/search-icon.svg"
+                alt="search-icon"
+              />
+              <i id="Facebook" class="fab fa-facebook-f"></i>
+              <i id="Shopping-Cart" class="fas fa-shopping-cart"></i>
+              <span class="badge badge-danger">69</span>
+            </form>
+          </div>
+        </div>
+        <div class="Heading-products">
+          <a href="#" class="Product Product-1">
+            <img src="./Media/borne-cycle.png" alt="Product1" />
+            <p>Børnecykler <br /><span>10 Modeller</span></p>
+          </a>
+          <a href="#" class="Product Product-2">
+            <img src="./Media/dame-cycle.png" alt="Product2" />
+
+            <p>Damecykler <br /><span>10 Modeller</span></p>
+          </a>
+          <a href="#" class="Product Product-3">
+            <img src="./Media/el-cycle.png" alt="Product3" />
+
+            <p>Elcykler <br /><span>10 Modeller</span></p>
+          </a>
+          <a href="#" class="Product Product-4">
+            <img src="./Media/herre-cycle.png" alt="Product4" />
+            <p>Herrecykler <br /><span>10 Modeller</span></p>
+          </a>
+          <a href="#" class="Product Product-5">
+            <img src="./Media/mountain-cycle.png" alt="Product5" />
+            <p>Hybrid cykler <br /><span>10 Modeller</span></p>
+          </a>
+          <a href="#" class="Product Product-6">
+            <img src="./Media/race-cycle.png" alt="Product6" />
+            <p>Mountainbikes <br /><span>10 Modeller</span></p>
+          </a>
+        </div>
+      </header>
+      <main>
+        <section>
+          <div class="Carousel-content">
+            <div class="owl-carousel owl-theme" id="Product-carousel">
+              <div class="Item">
+                <div class="Image">
+                  <img src="./Media/Carousel1.jpg" alt="Carousel1" />
+                </div>
+                <div class="Text">
+                  <h5>Welcome to <br />The Cycle World</h5>
+                  <a href="#">Buy a New Cycle</a>
+                </div>
+              </div>
+              <div class="Item">
+                <div class="Image">
+                  <img src="./Media/boernecykel.jpg" alt="Carousel1" />
+                </div>
+                <div class="Text">
+                  <h5>Welcome to <br />The Cycle World</h5>
+                  <a href="#">Buy a New Cycle</a>
+                </div>
+              </div>
+              <div class="Item">
+                <div class="Image">
+                  <img src="./Media/el-cykel.jpg" alt="Carousel1" />
+                </div>
+                <div class="Text">
+                  <h5>Welcome to <br />The Cycle World</h5>
+                  <a href="#">Buy a New Cycle</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Feedback">
+            <div class="Feedback-text">
+              <h5>
+                CykelKram hjælper dig med at vælge den helt rigtige cykel<br />
+                <span
+                  >Indsæt dine data og ønsker i Kramguiden – så er du godt på
+                  vej!</span
+                >
+              </h5>
+            </div>
+            <div class="Feedback-author">
+              <h3>KramGuiden <br />-det rigtige valg</h3>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="Description">
+            <div class="Description-heading">
+              <h2>
+                Her er du sikker på at få godt kram – til fornuftige priser.
+              </h2>
+            </div>
+            <div class="Description-details">
+              <p>
+                Hos CykelKram tilbyder et meget bredt udvalg af cykler og
+                tilbehør i høj kvalitet til særdeles fornuftige priser. Uanset
+                om du er på jagt efter en god børnecykel, en traditionel
+                damecykel eller herrecykel, kan du altid finde en god løsning
+                her hos os. Og ønsker du en Mountainbike eller en El-cykel er du
+                også i de bedste hænder.
+              </p>
+            </div>
+          </div>
+          <div class="Specification">
+            <div class="First-spec">
+              <button>Learn more</button>
+              <h2>Ladies Bicycels</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Incidunt, aliquid Lorem ipsum dolor sit amet consectetur
+                voluptatum illo, velit repellat quis temporibus aperiam, harum
+                quae id aliquid, magni ut iure ad sequi aspernatur.
+              </p>
+            </div>
+            <div class="Second-spec">
+              <h2>Stunt Bicycels</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Incidunt, aliquid Lorem ipsum dolor sit amet consectetur
+                voluptatum illo, velit repellat quis temporibus aperiam, harum
+                quae id aliquid, magni ut iure ad sequi aspernatur.
+              </p>
+              <button>Learn more</button>
+              <img src="./Media/ei-cykel-2.png" alt="background" />
+            </div>
+          </div>
+          <div class="Specification-2">
+            <div class="Third-spec">
+              <button>Learn more</button>
+              <h2>Ladies Bicycels</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Incidunt, aliquid Lorem ipsum dolor sit amet consectetur
+                voluptatum illo, velit repellat quis temporibus aperiam, harum
+                quae id aliquid, magni ut iure ad sequi aspernatur.
+              </p>
+            </div>
+            <div class="Fourth-spec">
+              <h2>Stunt Bicycels</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Incidunt, aliquid Lorem ipsum dolor sit amet consectetur
+                voluptatum illo, velit repellat quis temporibus aperiam, harum
+                quae id aliquid, magni ut iure ad sequi aspernatur.
+              </p>
+              <button>Learn more</button>
+              <img src="./Media/ei-cykel-1.png" alt="background" />
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="Products">
+            <a href="#" class="Product Item-1">
+              <div class="Image">
+                <img src="./Media/el-cykel.jpg" alt="Product" />
+              </div>
+              <div class="Product-Heading">
+                <h2>El-Cycles</h2>
+                <p>Comfortable Riding</p>
+              </div>
+            </a>
+            <a href="#" class="Product Item-2">
+              <div class="Image">
+                <img src="./Media/boernecykel.jpg" alt="Product" />
+              </div>
+              <div class="Product-Heading">
+                <h2>Boerne-Cycles</h2>
+                <p>Comfortable Riding</p>
+              </div>
+            </a>
+            <a href="#" class="Product Item-3">
+              <div class="Image">
+                <img src="./Media/mountain-bikes.jpg" alt="Product" />
+              </div>
+              <div class="Product-Heading">
+                <h2>Mountain-bikes</h2>
+                <p>Comfortable Riding</p>
+              </div>
+            </a>
+            <a href="#" class="Product Item-4">
+              <div class="Image">
+                <img src="./Media/race-cykel.jpg" alt="Product" />
+              </div>
+              <div class="Product-Heading">
+                <h2>Race-Cycles</h2>
+                <p>Comfortable Riding</p>
+              </div>
+            </a>
+            <a href="#" class="Product Item-5">
+              <div class="Image">
+                <img src="./Media/herre-cykel.jpg" alt="Product" />
+              </div>
+              <div class="Product-Heading">
+                <h2>Herre-Cycles</h2>
+                <p>Comfortable Riding</p>
+              </div>
+            </a>
+            <a href="#" class="Product Item-6">
+              <div class="Image">
+                <img src="./Media/dame-cykel.jpg" alt="Product" />
+              </div>
+              <div class="Product-Heading">
+                <h2>Ladies Cycles</h2>
+                <p>Comfortable Riding</p>
+              </div>
+            </a>
+          </div>
+          <div class="Our-service">
+            <div class="Service1">
+              <div class="Image">
+                <img src="./Media/red-star-info-1.png" alt="Red-star" />
+              </div>
+              <div class="Service-Heading">
+                <h3>TILBUD PÅ KRAM</h3>
+                <p>spare op til 75% pa udvagala cycler</p>
+              </div>
+              <button>Se ALLE tilbud</button>
+            </div>
+            <div class="Service2">
+              <div class="Image">
+                <img src="./Media/el-cycle.png" alt="Red-star" />
+              </div>
+              <div class="Service-Heading">
+                <h3>Altid mange cykler på lager</h3>
+                <p>Find din nye cykel her</p>
+              </div>
+              <button>Se hele udvalget</button>
+            </div>
+
+            <div class="Service3">
+              <div class="Image">
+                <img src="./Media/green-star-tick.png" alt="Red-star" />
+              </div>
+              <div class="Service-Heading">
+                <h3>Vi vil være best</h3>
+                <p>Vi brænder for det vi laver</p>
+              </div>
+              <button>høj kvalitet og høj service</button>
+            </div>
+
+            <div class="Service4">
+              <div class="Image">
+                <img src="./Media/green-star-tick-1.png" alt="Red-star" />
+              </div>
+              <div class="Service-Heading">
+                <h3>Det siger kunderne</h3>
+                <p>… og så ved man det passer</p>
+              </div>
+              <button>Læs mere</button>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="Our-Favorites">
+            <div class="Cycler">
+              <div class="Cycler-Heading">
+                <h2>Praktisk cykeltøj</h2>
+                <p>Stort udvalgt af cykeltøj og beklædning</p>
+                <div class="Image">
+                  <img src="./Media/home-safty.jpg" alt="Cycler" />
+                  <div class="Image-Text">
+                    <h2>Lorem ipsum Doller</h2>
+                    <p>Lorem ipsum dolor sit amet <br />consectetur.</p>
+                    <button>Learn more</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="About">
+              <div class="Image">
+                <img src="./Media/home-safty-2-1024x510.jpg" alt="Safty" />
+              </div>
+              <div class="About-Heading">
+                <h2>Lorem Ipsum Doller si</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur<br />
+                  adipisicing elit Lorem ipsum dolor sit amet<br />Lorem ipsum
+                  dolor sit.
+                </p>
+                <button>Learn more</button>
+              </div>
+            </div>
+            <div class="Cycling">
+              <div class="Image">
+                <img src="./Media/home-safty-3-1024x488.jpg" alt="Safty2" />
+              </div>
+              <div class="Cycling-Heading">
+                <h2>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </h2>
+                <button>Learn more</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="Subscribe">
+            <div class="Subscribe-mail">
+              <h1>Fa de bedst tilbund</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                provident rem error. Tempora, consectetur quod.
+              </p>
+              <form>
+                <div class="form">
+                  <input type="email" placeholder="E-mail" />
+                  <button type="submit">Send</button>
+                </div>
+                <input type="checkbox" /> <span> Jeg Accetpdndz bettigend</span>
+              </form>
+            </div>
+            <div class="Contact">
+              <div class="Contact-details">
+                <h1>speg migh!</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Possimus aperiam sapiente animi ab iste officiis libero nisi
+                  consequatur! Laudantium, autem.
+                </p>
+                <button>Send Mail</button>
+              </div>
+              <div class="Contact-Person">
+                <div class="Image">
+                  <img src="./Media/cykl_person-100x100.png" alt="Owner" />
+                </div>
+                <h3>Kernath</h3>
+                <p>Cycledealer<br /><span>Telefon: 9329328</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="Product-list">
+            <ul class="List-Header">
+              <li class="list-item1">
+                <a class="List-Title" href="#">Cycledioerr</a>
+                <ul>
+                  <li><a href="#">Borenecyles</a></li>
+                  <li><a href="#">Borenecyles</a></li>
+                  <li><a href="#">Borenecyles</a></li>
+                  <li><a href="#">Borenecyles</a></li>
+                  <li><a href="#">Borenecyles</a></li>
+                  <li><a href="#">Borenecyles</a></li>
+                  <li><a href="#"></a></li>
+                </ul>
+              </li>
+              <li class="list-item2">
+                <a class="List-Title" href="#">Cyclopedia</a>
+                <ul>
+                  <li><a href="#">Borenecyles</a></li>
+                  <li><a href="#">Borenecyles</a></li>
+                  <li><a href="#">Borenecyles</a></li>
+                  <li><a href="#"></a></li>
+                </ul>
+              </li>
+              <li class="list-item3">
+                <a class="List-Title" href="#">Cyclersiaka</a>
+                <ul>
+                  <li><a href="#">Borenecyles</a></li>
+                  <li><a href="#">Borenecyles</a></li>
+                  <li><a href="#">Borenecyles</a></li>
+                  <li><a href="#">Borenecyles</a></li>
+                  <li><a href="#">Borenecyles</a></li>
+                  <li><a href="#">Borenecyles</a></li>
+                  <li><a href="#">Borenecyles</a></li>
+                  <li><a href="#">Borenecyles</a></li>
+                  <li><a href="#">Borenecyles</a></li>
+                  <li><a href="#"></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <div class="Venue">
+            <div class="Location">
+              <div class="heading">
+                <h2>Kontakt</h2>
+              </div>
+              <div class="details">
+                <h5>Cyclekram</h5>
+                <p>Rollignlifd fr<br />firnknds<br />6933 dskn</p>
+                <h5>Telefon: <span>71794393</span></h5>
+                <h5>Mail: <span>info@cyclekram.dk</span></h5>
+                <p>CVR: 8328298</p>
+              </div>
+            </div>
+            <div class="Timing">
+              <div class="heading">
+                <h2>Abindagsar</h2>
+              </div>
+              <div class="details">
+                <h5>Monday 08:00-16:00</h5>
+                <h5>Tirsdag 08:00-16:00</h5>
+                <h5>Onsdag 08:00-16:00</h5>
+                <h5>Torsdag 08:00-16:00</h5>
+                <h5>Fredag 08:00-16:00</h5>
+                <h5>Lordag lukket</h5>
+                <h5>Sondag lukket</h5>
+              </div>
+            </div>
+            <div class="Info">
+              <div class="heading">
+                <h2>General Information</h2>
+              </div>
+              <div class="details">
+                <h6>Mine ordre</h6>
+                <p>Handlesbger</p>
+                <p>Bermunler</p>
+              </div>
+            </div>
+            <div class="Order">
+              <div class="heading">
+                <h2>Skrill til os</h2>
+              </div>
+              <form>
+                <input type="text" placeholder="Name" />
+                <input type="email" placeholder="Email" />
+                <input type="text" placeholder="Emne" />
+                <textarea rows="5" placeholder="Besked"></textarea>
+                <div class="Recaptcha">
+                  <div class="checkbox">
+                    <input type="checkbox" />
+                    <p>Jeg er ikke en robat</p>
+                  </div>
+                  <div class="Image">
+                    <img src="./Media/Recaptcha.png" alt="recaptcha" />
+                  </div>
+                </div>
+                <button type="submit">Send</button>
+              </form>
+            </div>
+          </div>
+          <div class="HR"></div>
+        </section>
+      </main>
+      <footer>
+        <div class="Footer">
+          <h5>&copy; 2020 Cyclekram.dk</h5>
+        </div>
+      </footer>
+    </div>
+    <script src="./JavaScript/Jquery.min.js"></script>
+    <script src="./OwlCarousel/dist/owl.carousel.min.js"></script>
+    <script src="./JavaScript/index.js"></script>
+  </body>
+</html>
